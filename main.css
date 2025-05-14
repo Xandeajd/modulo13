@@ -1,0 +1,122 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    padding-top: 60px; /* Ajuste conforme a altura do header */
+}
+
+/* Estilo do Header */
+.header {
+    background: url('img/header-bg.jpg') no-repeat center/cover;
+    opacity: 0.9;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Linha suave */
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Garante que o header fique acima do conteúdo */
+    backdrop-filter: blur(10px); /* Desfoque suave (para navegadores que suportam) */
+    padding: 10px 20px;
+    transition: opacity 0.5s ease, visibility 1s ease; /* Transição suave */
+}
+
+/* Garantindo que o logo vá para a esquerda */
+.logo {
+    max-width: 500px;
+    overflow: hidden; /* Garante que nada extra apareça */
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Mantém a proporção do logo */
+}
+
+.nav {
+    flex: 1; /* Garante que o menu fique à direita */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd700; /
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilizando o formulário de contato */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo com leve transparência */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário */
+    transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: scale(1.02); /* Efeito de leve zoom ao passar o mouse */
+}
+
+/* Espaçamento superior na seção de contato */
+#contato {
+    padding-bottom: 80px;
+    margin-top: 100px;
+}
+
+/* Estilo do Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro com leve transparência */
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer a {
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffd700; /* Dourado no hover */
+}
